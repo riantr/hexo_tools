@@ -1,4 +1,5 @@
 if [ -z $1 ];then
+    echo usage: .hlp [keyWords] [rm]
     ls ~/work/hexo/source/_posts/
 else
     if [ "$2" == "rm" ];then
