@@ -33,6 +33,7 @@ echo -e "title: Categories\nlayout: categories\n---" > categories/index.html
 cnpm install hexo-generator-slidehtml --save
 cnpm install hexo-filter-inline-assets --save
 sed -i 's/next/freemind/g' _config.yml 
+hexo new page categories
 hexo new page about
 hexo new page tags
 nohug hexo s
