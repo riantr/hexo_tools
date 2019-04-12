@@ -1,7 +1,7 @@
 if [ -z $1 ];then
     echo "usage: .hvp <PostName>"
 else
-
+    chmod -R 774 source/_posts/
     if [ ! -f source/_posts/$1.md ];then
         hexo n $1 1>>posts.log
         for i in $(echo $1|xargs -d-|xargs -n 1)
@@ -18,4 +18,5 @@ else
     else
         vim source/_posts/$1.md
     fi
+    chmod -R 444 source/_posts
 fi
